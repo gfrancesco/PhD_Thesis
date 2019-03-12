@@ -1,0 +1,43 @@
+\chapter[Related Work]{Related Work: IoT Toolkits}
+\label{cha:toolkits}
+
+
+In the HCI field, Greenberg \autocite*{greenberg_toolkits_2007} defined toolkits as a way to encapsulate interface design concepts for programmers, as a language that facilitates creation \autocite{myers_past_2000}. More widespread in the literature is the concept of toolkits as a means to describe various types of software, hardware, design and conceptual frameworks. More articulated definitions based on the original one from Greenberg were subsequently proposed, defining toolkits as generative platforms designed to create new interactive artefacts, provide easy access to complex algorithms, enable fast prototyping of software and hardware interfaces and/or enable creative exploration of design spaces \autocite{ledo_evaluation_2018}. Toolkits can support users via programming or configuration environments consisting of many defined permutable building blocks, structures or primitives, with a sequencing of logical or design flow affording a \textit{path of least resistance} \autocite{ledo_evaluation_2018}. Wobbrock and Kientz \autocite*{wobbrock_research_2016} viewed toolkits as contributing \textit{artefacts}, where \textit{\enquote{new knowledge is embedded in and manifested by artefacts and the supporting materials that describe them}}.
+
+Research on and involving toolkits is considered \textit{constructive research}, defined as \textit{\enquote{producing understanding about the construction of an interactive artefact for some purpose in human use of computing}} \autocite{oulasvirta_hci_2016}. Thus, they are generative platforms designed to create new artefacts, while simplifying the authoring process and enabling creative exploration \autocite{ledo_evaluation_2018}.
+
+Ledo et al. \autocite*{ledo_evaluation_2018} summarised the value of toolkits into five goals:
+\begin{itemize}
+    \item \textbf{G1} - Reducing Authoring Time and Complexity. Concepts are encapsulated to simplify expertise, making it easier for users to author new interactive systems \autocites{greenberg_toolkits_2007, olsen_jr_evaluating_2007}.
+    \item \textbf{G2} - Creating Paths of Least Resistance. Defined rulesets and pathways lead the users to consistent solutions \autocite{myers_past_2000}.
+    \item \textbf{G3} - Empowering New Audiences. Thanks to the reduced authoring effort, new audiences can be involved in the authoring process, like artists and designers \autocite{olsen_jr_evaluating_2007}.
+    \item \textbf{G4} - Integrating with Current Practices. Existing infrastructures and standards can be leveraged as building blocks, enabling power and robustness in combination \autocite{olsen_jr_evaluating_2007}.
+    \item \textbf{G5} - Enabling Replication and Creative Exploration. Implementation and replication of ideas to explore a concept can be the first step to the creation of a new suite of tools \autocite{greenberg_toolkits_2007}.
+\end{itemize}
+
+Many of these goals are well adapted to tackle the research objectives presented in Section~\ref{sec:motivation}. For example, G5 promotes the creation of new tools, which can help overcome the lack of human-centred IoT solutions in the SCL domain. G2 and G3 extend the influence to new audiences, directly involving users in the authoring process and facilitating prototyping. This approach suits the co-design methodology and assists the involvement of non-expert users. The reduced authoring time described in G1 allows iterating quickly during hands-on activities, achieving tangible results in less than a day of work.
+
+
+\section{Common Toolkit Architectures}
+
+Toolkits are typically different from systems that perform a single task (e.g. an algorithm or an interaction technique) as they provide generative, open-ended authoring within a design space \autocite{ledo_evaluation_2018}. They support the creation of different solutions by reusing and combining the building blocks provided. These blocks can take the form of software modules with a simplified interface or hardware components that can be easily recombined or implement other forms of encapsulation and abstractions connected to specific realms like interaction modalities, communication protocols or application domains.
+This open-ended, generative authoring process within a domain space differentiates toolkits from systems that perform a single task. Different solutions can be created by recombining and adapting the building blocks provided, through a process significantly quicker and simpler than building a dedicated system.
+
+
+\section{Card-Based Toolkits for IoT}
+
+During co-design activities, brainstorming cards are often used to promote idea generation \autocite{vaajakallio_design_2014}.
+Using cards makes focus change easier \autocite{hornecker_creative_2010}; cards can act as a mediator to the conversation between participants from different backgrounds during creative workshops \autocite{carneiro_io_2011}.
+The nature of cards inherently supports non-expert users hiding unnecessary complexities, while playing an informative role. They allow users to brainstorm and explore ideas focusing on the design rather than dealing with technical constraints. During such activities, users can point to, discuss and pass around cards, encouraging collaboration and social interaction and fostering creativity \autocite{carneiro_io_2011}. The outcome of this process is usually a design idea, or the framing of a small project, towards which the users develop a better level of connection and empathy.
+
+Several card-based toolkits supporting brainstorming activities for the IoT can be found in the literature.
+
+\begin{itemize}
+    \item IoT service kit\footnote{iotservicekit.com} uses paper maps, 3D printed tokens and cards as artefacts representing the context, domain, assets and interactions. The toolkit supports the framing of several layers of an IoT solution. It is possible to define the needs in terms of technologies, sketch a user journey and map the flow of data.
+    \item Mapping the IoT\footnote{mappingtheiot.polimi.it} was created to refine already existing ideas and to support the user in the process of enriching and augmenting through technology existing products. The toolkit promotes a meta-design approach, starting with the definition of the target users, markets and technologies and using these findings as a focus point to define the project brief. The cards contain elements of the design process, technology, context, strategy and interaction techniques.
+    \item IoT design deck\footnote{iotdesigndeck.com} covers the brainstorming and design phases of an IoT application through several decks of cards. As a first step, participants define the domain, the target user, the problem and which type of technology to use. Five additional decks of cards are used to inspire the design, propose provocative themes and define the inputs and outputs employed.
+    \item IoT ideation cards\footnote{sites.google.com/studiodott.be/research/iot-ideation-cards} is a customisable card deck to conceptualise and define IoT product ideas. The cards can be arranged to compose a storyboard to illustrate logic flows, data networks and use cases. The goal is to allow any kind of team to visualise all the components that play a role in an Internet connect product.
+    \item Know cards\footnote{know-cards.myshopify.com} represent simple electronic components, divided into decks representing sensors, actuators, power sources and connectivity. The cards can be used to brainstorm technology-driven applications, to learn about already existing components or to play with ideas involving random cards.
+\end{itemize}
+
+These toolkits were a source of inspiration for my work. However, none of them presented all the necessary features to cover my research objectives, described in Section~\ref{sec:motivation}. For example, some of the toolkits are meant to be used by professionals or necessitate direct supervision from design experts to be employed. Others cover only a narrow design space, whereas some of them are meant to be used through a process lasting several days or weeks.

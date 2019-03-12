@@ -1,0 +1,215 @@
+%\documentclass[10pt,twoside,openright,b5paper]{memoir}
+\documentclass[10pt,twoside,openright]{memoir}
+
+%\DisemulatePackage{crop}
+
+\usepackage[utf8]{inputenc}
+\usepackage[style=authoryear]{biblatex}
+\renewcommand*{\nameyeardelim}{\addcomma\addspace}
+\usepackage{csquotes}
+\usepackage[british]{babel}
+\usepackage{tikz}
+\usepackage{enumitem}
+
+\newcommand*{\numberingI}[1]{%
+\footnotesize\protect\tikz[baseline=-6pt]%
+\protect\node[fill=gray!10,shape=circle,draw,inner sep=3pt,line width=0.3mm](n1){#1};}
+
+% from phd template
+%\usepackage[cam,a4,center]{crop}
+%\usepackage[lmargin=25mm,rmargin=25mm,tmargin=27mm,bmargin=30mm]{geometry}
+%\usepackage[lmargin=25mm,rmargin=25mm,tmargin=27mm,bmargin=30mm, bindingoffset=5mm]{geometry}
+%\linespread{1.1}
+
+
+
+% Layout from master template
+%\setbinding{10mm}
+%\setstocksize{297mm}{210mm}
+
+\setstocksize{250mm}{176mm}
+\settrimmedsize{250mm}{176mm}{*}
+\setlrmarginsandblock{30mm}{20mm}{*}
+\setulmarginsandblock{27mm}{30mm}{1}
+\checkandfixthelayout
+
+% chapter style:
+\makeatletter
+\makechapterstyle{thesis}{%
+  \renewcommand{\chapternamenum}{}
+  \setlength{\beforechapskip}{0pt}
+  \setlength{\midchapskip}{0pt}
+  \setlength{\afterchapskip}{0pt}
+  \renewcommand{\chapnamefont}{\LARGE}
+  \renewcommand{\chapnumfont}{\chapnamefont}
+  \renewcommand{\chaptitlefont}{\chapnamefont}
+  \renewcommand{\printchapternum}{}
+  \renewcommand{\afterchapternum}{}
+  \renewcommand{\printchaptername}{}
+  \renewcommand{\afterchaptertitle}{\chapnumfont\hfill\thechapter\\\vspace*{-.3cm}\hrulefill\vspace*{6cm}\\}
+}
+\makeatother
+
+%\setsecheadstyle{\LARGE\mdseries}
+%\setsubsecheadstyle{\Large\mdseries}
+
+% divisions:
+\maxsecnumdepth{subsubsection}
+\maxtocdepth{subsection}
+\setsecnumdepth{subsection}
+
+
+
+%caption
+%\makeatletter 
+%\renewcommand{\fnum@figure}{\textsc{\figurename~\thefigure}}
+%\makeatother
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\graphicspath{{imgs/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,jpeg}
+\usepackage{pdfpages}   %To include PDFs
+\usepackage{wrapfig}
+\usepackage{booktabs, tabulary, longtable}
+\usepackage{rotating, multirow, pdflscape}
+\usepackage[flushleft]{threeparttable}
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{verbatim, enumitem}
+\usepackage{array}
+
+%hyperlinks
+\usepackage[unicode=true]{hyperref}
+\hypersetup{breaklinks=true,
+            %bookmarks=true,
+            pdfauthor={Francesco Gianni},
+            pdftitle={PhD Thesis},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=black,
+        %    pdfborder={0 0 0}
+			}
+\urlstyle{same}  % don't use monospace font for urls
+
+%Pharagraph style
+\setlength{\parindent}{0pt} 
+\setlength{\parskip}{6pt plus 2pt minus 1pt} 
+%\setlength{\emergencystretch}{3em} % prevent overfull lines 
+
+%Bibliography
+\addbibresource{Thesis.bib}
+
+%Service commands
+\newcommand*{\missingreference}[1]{\colorbox{red}{?#1?}}%JB
+\newcommand*{\missingcitation}[1]{\colorbox{red}{?#1?}}%JB
+\makeatletter
+\def\@setref#1#2#3{%
+  \ifx#1\relax
+   \protect\G@refundefinedtrue
+   \nfss@text{\reset@font\missingreference{#3}}%%JB
+   \@latex@warning{Reference `#3' on page \thepage \space
+             undefined}%
+  \else
+   \expandafter#2#1\null
+  \fi}
+\def\@citex[#1]#2{\leavevmode
+  \let\@citea\@empty
+  \@cite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{,\penalty\@m\ }%
+     \edef\@citeb{\expandafter\@firstofone\@citeb\@empty}%
+     \if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi
+     \@ifundefined{b@\@citeb}{\hbox{\reset@font\missingcitation{#2}}%%JB
+       \G@refundefinedtrue
+       \@latex@warning
+         {Citation `\@citeb' on page \thepage \space undefined}}%
+       {\@cite@ofmt{\csname b@\@citeb\endcsname}}}}{#1}}
+\makeatother
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+	% \specialcell{Date,\\duration}
+	
+% left align in table paragraphs
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+
+\newcommand{\MRQ}{How can non-expert users be supported during brainstorming, design and tangible exploration of ideas of IoT applications for SCL?}
+
+\newcommand{\RQi}{How can the phases of brainstorming, design and tangible exploration of IoT ideas be connected and integrated to provide an experience adapted to the skills of non-expert users?}
+
+\newcommand{\RQii}{Which kind of brainstorming and design tools can be employed to generate IoT application ideas? And how can they be specialised to target specific goals and application domains?}
+
+\newcommand{\RQiii}{Which IoT technologies and architectures can efficiently support prototyping and tangible exploration of ideas for non-expert users?}
+
+
+
+\newcommand{\Ci}{Improved understanding of the holistic process supporting non-experts in idea generation, design and prototyping of IoT applications}
+
+\newcommand{\Cii}{Contribution to the design, implementation and evaluation of a card-based design toolkit for idea generation, allowing non-experts to generate concepts of IoT applications}
+
+\newcommand{\Ciii}{Contribution to the design, implementation and evaluation of a rapid prototyping toolkit for tangible exploration of ideas based on smart augmented objects}
+
+\newcommand{\Civ}{Improved understanding of educational methods to support learning about smart cities and IoT}
+
+\newcommand{\Cv}{Knowledge in the definition of a technological framework to overcome recognised challenges and limitations affecting the IoT domain}
+
+
+%-------------------------------------
+
+\begin{document}
+
+% \title{From Ideation to Prototyping of IoT Systems: The Case of Smart Cities}
+% \author{Francesco Gianni}
+% \maketitle
+
+\aliaspagestyle{part}{empty}
+\includepdf{cover-1.pdf}
+\includepdf{cover-2.pdf}
+\frontmatter
+\setcounter{page}{3}
+\include{F5-quotes}
+\cleardoublepage
+\include{F1-abstract}
+\cleardoublepage
+\include{F2-preface}
+\cleardoublepage
+\include{F3-acknowledgements}
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\listoffigures
+\cleardoublepage
+\listoftables
+\cleardoublepage
+\include{F4-abbreviations}
+
+\mainmatter
+\part[Part I]{Introduction and Methods}
+\chapterstyle{southall}
+\pagestyle{ruled}
+\include{C01-introduction}
+\include{C02-scl}
+\include{C03-related_toolkit}
+\include{C04-iot_framework}
+\include{C05-theories}
+\include{C06-research}
+\include{C07-results}
+\include{C08-contributions}
+\include{C09-evaluation}
+\include{C10-conclusions}
+\appendix
+\backmatter
+\printbibliography[title=References]
+
+\makeatletter
+\def\pagenumbering#1{%
+  \gdef\thepage{\csname @#1\endcsname \c@page}}
+\makeatother
+
+\mainmatter
+\part[Part II]{Research Papers}
+\pagenumbering{gobble}
+\pagestyle{cleared}
+\include{P2-papers}
+\end{document}

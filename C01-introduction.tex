@@ -1,0 +1,230 @@
+\mainmatter
+
+\chapter{Introduction}
+\label{cha:introduction}
+
+\section{Domain}
+\label{sec:domain}
+
+In this section the research domain of the thesis and the target user group are presented, and a brief description will introduce the adopted concepts of the \textit{Internet of Things} \textit{(IoT)}, \textit{smart cities} and \textit{non-expert} users.
+
+
+\subsection{Internet of Things}
+
+Connected objects and appliances appeared as early as in 1982, with the first connected coke machine developed at Carnegie Mellon University. Since then, many definitions have been proposed for IoT \autocites{ashton_that_2009}{gubbi_internet_2013}, while a few basic principles still stand at the foundation and are shared among most of the theoretical interpretations:
+\begin{itemize}
+	\item Computers are no longer objects, but accessories that can be embedded or placed in the environment, deploying computational power away from the desktop or the server room.
+	\item IoT devices have a connected nature. They can share and receive data from each other or communicate over the internet.
+	\item Computers are now capable of sensing and acting in the physical world, which goes beyond the traditional computer paradigm of mice and keyboards as input devices and screens as output devices.
+\end{itemize}
+
+Some of the proposed definitions are connected to the use of particular technological approaches \autocite{welbourne_building_2009}, whereas others are related to the domain or how the technology is used. A few examples involve machine-to-machine (M2M) systems, networks of sensors to collect data on a territory \autocite{murty_citysense_2008} and technology-augmented appliances designed for a particular domain like households \autocite{alkar_internet_2005} or cities \autocite{hernandez-munoz_smart_2011}. 
+
+In my research, I focused on IoT as an approach to \textit{object augmentation}, as a technological medium to enable the creation of \textit{smart objects}. Given the exploratory nature of the research work performed, energy efficiency, security and cost-reduction aspects related to IoT were addressed with a low level of priority. Forms of IoT outside the notion of smart objects, like the above-mentioned sensor networks, screen-based appliances and IoT applications that do not foresee any user involvement, remained outside of my research domain. 
+
+Smart objects appear and can be used like a regular object, but at the same time they provide additional affordances, thanks to their embedded technological layer. They have been previously defined by Michael Beigl and his colleagues as \enquote{\textit{everyday artefacts augmented with computing and communication, enabling them to establish and exchange information about themselves with other artefacts and/or computer applications}} \autocite{beigl_mediacups_2001}.
+This approach to IoT through smart objects enables the creation of \textit{tangible user interfaces} (TUIs) \autocite{ishii_tangible_1997}, a method to interact with a computer application using object manipulation instead of a keyboard and to use output feedback involving several senses instead of a screen.
+
+
+\subsection{Non-Expert Users}
+\label{sec:non-experts}
+
+During my research, the technological approach I embraced was based on a user-centred perspective, thus promoting inclusion and participation, extending the impact of the solutions to a wide portion of the population. I addressed a precise target group of users, defined as \textit{non-experts}, who are individuals that do not need to possess professional skills in design, programming languages, electronics or computer networks.
+
+The aim of my work was to directly involve non-experts in designing meaningful IoT applications, through a process tailored to their capabilities, while meeting their needs and desires. The ultimate goal was to provide access to the affordances offered by IoT to new communities, lowering the access barriers and reducing the complexity.
+
+
+\section{Challenges}
+
+Working with TUIs and smart objects is challenging because building meaningful applications requires skills in multiple domains, like human-computer interaction (HCI), design, programming and electronics. Moreover, works in these fields have traditionally focused on technical facets \autocite{siegemund_context-aware_2004}, whereas HCI aspects received attention only recently \autocite{nelson_user_2005}. Yet, design principles and methods for smart objects that go beyond mere hardware are at the forefront of research exploration \autocite{kortuem_smart_2010}.
+
+Another demanding point is related to the development process: heterogeneous needs from end-users make the development of products and technological solutions increasingly difficult \autocite{von_hippel_user_2001}. Toolkits for innovation address these challenges, allowing end-users to play an active role in product development. Toolkits allow breaking down the design space into atomic tasks and building blocks, which can be more easily recombined allowing \textit{design-by-trial-and-error}, avoiding costly iterations and speeding up the process \autocite{cvijikj_toolkit_2011}.
+
+Despite the simplifications introduced by the use of the toolkits, following a user-centred approach can still be hard. Non-experts belong to a diverse set of categories, characterised by different needs and skills. Collaborative processes can help by stimulating discussions and allowing users to reach a common ground, a shared lingo allowing them to contribute to the design process despite their diversity.
+
+
+\section{Motivation}
+\label{sec:motivation}
+
+Many solutions and toolkits have been proposed to facilitate the development of IoT applications \autocite{udoh_developing_2017}. The technologies supporting this process include software, hardware, electronic devices and networking protocols. Efforts were made to simplify the assembly and programming of electronic devices involving the use of sensors, actuators and network connectivity. On the software side, several organisations have proposed different standards to define a common interface and a shared data model to represent the typical information bits related to a wide number of IoT devices.
+Numerous networking protocols were also created, adapted or re-used in the IoT domain to address specific trade-offs involving bandwidth, latency, energy consumption and wireless coverage \autocite{chen_performance_2016}. In terms of hardware, Arduino \autocite{mellis_arduino_2007} started a revolution introducing a platform that allows users with limited electronic skills to wire sensors and actuators to a microcontroller, programmed through a simplified software toolchain compared to approaches traditionally used in embedded programming.
+Despite the innovative solutions and significant advancements in these sub-fields, important challenges are still present in each of them, especially when targeting new audiences that might lack the domain knowledge and technical skills traditionally required to start working with the IoT.
+
+For example, despite the numerous standards, data models, interfaces and networking protocols proposed, none of them emerged as a clear winner, providing an open, royalty-free solution on a par with HTTP and HTML for the web \autocite{guinard_building_2016}. In addition, the data models and software libraries proposed only address IoT devices designed to sense and interact with the ambient environment, such as a thermostat, a temperature sensor or a lamp. There is little support for keeping humans in the loop through typical gestures and patterns that characterise human interaction with objects, like touching, shaking, tilting and so on.
+On the hardware side, basic electronic skills and knowledge are still required to wire electronic components to an Arduino microcontroller.
+
+Already existing IoT toolkits and frameworks usually focus on facilitating a single aspect of the development process of an IoT application. For example, they assume that the user will continue in such a process by choosing and adopting a software framework to program the application logic for the electronic device assembled, or that the user will solve the network connectivity problem independently. This silo effect is particularly challenging for non-experts, who might lack the critical skills required to address a particular aspect.
+
+With IoT being a loosely defined concept, non-experts often need to start learning about the domain and technology, exploring the solution space while brainstorming a possible application idea. The silo effect can be mitigated by gradually building knowledge, utilising the same abstractions and constructs during all the development phases. This approach helps devise a holistic process rather than an arbitrary selection of tools that are not necessarily designed to work together. A holistic approach can then ease the democratisation of the technology, enabling wider audiences.
+
+The main domain case addressed in this thesis undertakes some of the challenges affecting modern smart cities. In fact, citizens often fall into the definition of non-experts. Few studies have explored how to enable co-design and promote citizen participation through the use of IoT technologies that keep humans in the loop. A high level of participation in acknowledging the problem and developing a technological solution also promotes the appropriation of the idea. The benefits extend to the idea adoption and to the achievement of a learning impact that lasts longer, compared to prescriptive methods.
+
+
+\section{Problem Statement}
+\label{sec:problem-statement}
+
+The goal of my work was to find new ways to empower non-experts in the development of IoT applications. This was framed as a holistic and creative process, which also aimed to promote lifelong learning and awareness about opportunities and challenges affecting modern smart cities. Smart city learning (SCL) was used as a case and as an application domain. It helped the users find design constraints and goals while at the same time providing a playground to tackle widely recognised societal challenges affecting citizens worldwide. For my research, SCL has demonstrated to be a compelling domain case since (i) citizens often belong to the non-expert user category, (ii) IoT and smart objects can help support lifelong learning, (iii) SCL keeps a user-centred perspective and (iv) it addresses challenges affecting a wide portion of the population.
+
+Analysing the literature on the technological applications for SCL, we discovered a lack of research regarding the following:
+
+\begin{itemize}
+\item The use of IoT, tangible interfaces and smart objects, defined in Section~\ref{sec:domain}. Most applications make use of smartphones or screen-based interfaces or do not require direct user interaction with the technology.
+
+\item The role of smart cities as an evolving community of citizens that cooperate and learn continuously to solve challenges related to large urbanisation. Research on smart cities is often limited to confined sub-domains or restricted communities.
+
+\item Active engagement of the users and co-design in the city. Users are often only marginally involved in the studies, resulting in a little impact in terms of learning, long-term behaviour change or awareness of the city challenges.
+
+\item When addressing behaviour changes, the methodologies employed could not convey knowledge or awareness or enrich the user in any way. Most of the times, prescriptive methodologies such as persuasion were used. These methods have limited potential in stimulating the learning outcome and, as such, achieving results that last in time.
+\end{itemize}
+
+The tools, theories and technological artefacts adopted during my PhD explored the opportunities at the intersection of the above-mentioned fields. The solutions envisioned follow the principles detailed here:
+
+\begin{itemize}
+\item \textbf{IoT} - Technological applications make use of augmented objects and tangible interfaces. Those applications orchestrate the use of ecologies of different interconnected objects. Such objects support the user experience and the application objective by providing immediate sensory feedback, detecting user interaction and collecting environmental data, while being able to communicate with Internet services and data providers.
+
+\item \textbf{SCL} - The domain of smart cities is seen from a user-centred perspective. Several challenges affecting the world population living in cities have been identified by the United Nations \autocite{un_smart_2015}. These challenges were proposed as domain problems to non-expert users, providing a design goal for the IoT applications to be created.
+
+\item \textbf{Co-Design} - The envisioned process extends the involvement of the users beyond the simple usage of the application, addressing also the development phase. Given the potential complexity of the IoT and the non-expert nature of the target users, supporting co-design in this context is particularly challenging.
+
+\item \textbf{Behaviour Changes and Lifelong Learning} -  The IoT applications created by the users during co-design activities are designed to support lifelong learning. Behaviour changes are encouraged and focus on reflective learning and increased awareness. Learning also includes knowledge about the domain and the technologies, which is conveyed while brainstorming and designing the IoT application. These methods better promote a long-term impact and a more permanent outcome, in relation to the specific problems or challenges addressed.
+\end{itemize}
+
+
+\section{Research Methodology}
+\label{sec:research-methodology}
+
+The research methodology adopted is based on \emph{design science research} \autocites{hevner_design_2010}{march_design_1995}. Exploratory studies were conducted mainly in the form of design and prototyping workshops, following a \emph{user-centred approach} \autocites{maguire_methods_2001}{gulliksen_key_2003}. During these activities, theories and tools developed during multiple iterations were validated on the field. Co-design was used as a strategy to pursue collaboration, awareness and a long-term impact for the end-users.
+
+Quantitative and qualitative research methods \autocite{robson_real_1993} have been adopted, including observations of the activities of the end-users during the studies. Quantitative data were collected in the form of questionnaires and through a systematic analysis of the artefacts produced by the users. During the studies, the users also produced scenarios, personas, storyboards and public pitch of ideas. These user-generated materials aided the user-centred design work of improvement and refinement of the tools and methods employed. Consistent with the design science research methodology, grounded in the activities of \emph{building} artefacts for a specific purpose and of \emph{evaluating} how well the artefacts perform \autocite{march_design_1995}, a number of prototyping iterations and evaluation studies have been performed on the tools employed during the user studies.
+
+Prototyping involved the construction of a set of tools and technologies supporting the various stages of the development process of an IoT application. The design of such tools was grounded in relevant theories and refined by the experience matured during the user studies, which also contributed to the validation of theories and to the development of new constructs. The numerous user studies performed facilitated building and understanding the domain. I did not have any previous knowledge of design methods and had limited knowledge of electronic prototyping.
+
+All the tools produced were evaluated during studies with the end-users; some of the tools went through multiple iterations. The goal was to assess the utility, usability and efficacy.
+
+
+\section{Research Questions}
+\label{sec:research-questions}
+
+The main research question for my PhD work is as follows:
+\begin{quote}
+	\textbf{MRQ:} \MRQ 
+\end{quote}
+
+In order to answer the main research question, this work was broken down into three sub-questions:
+\begin{quote}
+	\textbf{RQ1:} \RQi 
+\end{quote}
+\begin{quote}
+	\textbf{RQ2:} \RQii 
+\end{quote}
+\begin{quote}
+	\textbf{RQ3:} \RQiii
+\end{quote}
+
+
+\section{Research Outcomes}
+
+Seven research papers published in peer-reviewed conferences and journals explored the research questions. Building on the results reported in these papers, a body of knowledge regarding the research questions in the fields of SCL, interaction design (ID), HCI and IoT has been developed.
+
+Finally, actions were taken to publicly release the solutions developed, while research contributions were evaluated for commercial exploitation. More information regarding these matters is provided in Section~\ref{sec:exploitation}.
+
+
+\subsection{Research Papers}
+\label{sub:research-papers}
+
+The research questions are addressed in the following research papers:
+
+\begin{enumerate}[label=\numberingI{\textbf{P\arabic*}}]
+    \item Gianni, Francesco, and Monica Divitini (2016) \textbf{\enquote{Technology-Enhanced Smart City Learning: A Systematic Mapping of the Literature.}} \emph{Interaction Design and Architecture(s) Journal - IxD\&A} 27:28--43.
+    \item Mora, Simone, Francesco Gianni, and Monica Divitini (2017) \textbf{\enquote{Tiles: A Card-Based Ideation Toolkit for the Internet of Things.}} In: Proceedings of the 2017 Conference on Designing Interactive Systems. DIS 2017. 587--598. Edinburgh, United Kingdom: ACM.
+    \item Gianni, Francesco, and Monica Divitini (2018) \textbf{\enquote{Designing IoT Applications for Smart Cities: Extending the Tiles Ideation Toolkit.}} \emph{Interaction Design and Architecture(s) Journal - IxD\&A} 35:100--116.
+    \item Gianni, Francesco, Lisa Klecha, and Monica Divitini (2019) \textbf{\enquote{Tiles-Reflection: Designing for Reflective Learning and Change Behaviour in the Smart City.}} In: The Interplay of Data, Technology, Place and People for Smart Learning. SLERD 2018. \emph{Smart Innovation, Systems and Technologies} 95:70--82. Aalborg, Denmark: Springer, Cham.
+    \item Mavroudi, Anna, Monica Divitini, Francesco Gianni, Simone Mora and Dag R. Kvittem (2018) \textbf{\enquote{Designing IoT Applications in Lower Secondary Schools.}} In: Proceedings of IEEE Global Engineering Education Conference. EDUCON 2018. 1120--1126. Tenerife, Spain: IEEE.
+    
+    {\footnotesize \textit{\includegraphics[height=13pt]{trophy.eps} -- Best Paper Award at EDUCON 2018.}}
+    \item Gianni, Francesco, Simone Mora, and Monica Divitini (2018) \textbf{\enquote{RapIoT Toolkit: Rapid Prototyping of Collaborative Internet of Things Applications.}} \emph{Journal of Future Generation Computer Systems.} Elsevier.
+    
+    {\footnotesize \textit{\includegraphics[height=13pt]{trophy.eps} -- The conference version of this paper received the Best Paper Award at the International Conference on Collaboration Technologies and Systems (CTS) in 2016.}}
+    \item Gianni, Francesco, Simone Mora, and Monica Divitini (2018) \textbf{\enquote{Rapid Prototyping Internet of Things Applications for Augmented Objects: The Tiles Toolkit Approach.}} In: Ambient Intelligence. AmI 2018. \emph{Lectures Notes in Computer Science.} 11249:204--220. Larnaca, Cyprus: Springer, Cham.
+\end{enumerate}
+
+Table \ref{tab:rq-papers-relation} shows the mapping between research papers and research questions.
+
+\begin{table}
+	[tbh] \centering \caption{Connection between research papers and research questions.} \label{tab:rq-papers-relation}
+	\begin{tabular}
+		{cccccccc} \toprule  & P1 & P2 & P3 & P4 & P5 & P6 & P7 \\
+		\midrule 
+		RQ1 & & \textbullet & \textbullet & & & \textbullet & \textbullet \\
+		RQ2 & \textbullet & \textbullet & \textbullet & \textbullet & \textbullet & &  \\
+		RQ3 & & & & & & \textbullet & \textbullet \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\subsection{Research Contributions}
+\label{sub:research-contributions}
+
+The seven papers published added to the following contributions:
+
+\begin{quote}
+	\emph{\textbf{C1:} \Ci.} This presents challenges and lessons learned derived from the field experience of the author in designing and evaluating a toolkit to support such process.
+\end{quote}
+\begin{quote}
+	\emph{\textbf{C2:} \Cii.} This includes the evaluation, refinement and specialisation of the toolkit to better target the SCL domain. 
+\end{quote}
+\begin{quote}
+	\emph{\textbf{C3:} \Ciii.} This includes the design and production of wireless electronic devices, applications for mobile devices and cloud-based software. 
+\end{quote}
+\begin{quote}
+	\emph{\textbf{C4:} \Civ.} This investigates workshops for brainstorming and tangible exploration of IoT ideas as a means to convey knowledge about technology and smart cities.
+\end{quote}
+\begin{quote}
+	\emph{\textbf{C5:} \Cv.} This describes the first draft of an IoT framework supporting applications that involve object manipulation, as well as sensory feedback and data collection. How the framework can be implemented using established standards and open technologies is also described.
+\end{quote}
+
+
+\section{Context of the Work}
+
+The research work presented in this thesis contributed to the development of the Tiles project\footnote{www.tilestoolkit.io}. The goal of this project is to design and manufacture an integrated set of tools to enable new, non-technical audiences to brainstorm, design and prototype IoT applications involving smart objects. Tiles propositions include ease of use, support for multiple design iterations, velocity, rapid feedback loops and user enjoyment.
+
+As a contributing researcher in the Tiles project, I took part in different activities, such as design, implementation, development coordination, revision and evaluation of different tools created in the context of the project.
+
+The tools produced and the data collected during the evaluations were also employed to explore the learning potential of the Tiles approach in educational contexts. This work was conducted thanks to the support from partners in the UMI-Sci-Ed project\footnote{www.umi-sci-ed.eu}, funded by the European Union. The outcomes of such research are valuable for the work described in this thesis, since they provided insights into the ability of the tools created to convey knowledge about IoT and smart cities to children. Such domain knowledge was required to inform the subsequent phases of development of the IoT ideas.
+
+During my PhD period, I co-advised the specialisation project and master thesis of two students who contributed to the Tiles project and to other areas. The co-advising activities resulted in the co-authoring of P4 and two other articles. In addition, I coordinated the development of the mobile application described in P6. The work was performed by a group of students, as part of a semester course on the management of real-world technical projects.
+
+
+\section{Structure of the Thesis}
+
+The thesis is composed of two parts:
+
+\begin{itemize}
+	\item \textbf{Part I} -- presents the introduction to the research work and provides an overview of the background theories, the methods used, the results achieved and the contributions made by the thesis.
+	\item \textbf{Part II} -- contains the seven research papers that added to the results of this thesis.
+\end{itemize}
+
+The rest of \textbf{Part I} is organised as follows:
+
+\begin{itemize}
+    \item \textbf{Chapter \ref{cha:smart-cities}} offers an overview of SCL and motivates its employment as an application domain.
+
+	\item \textbf{Chapter \ref{cha:toolkits}} introduces related work and defines the toolkits for IoT.
+	
+	\item \textbf{Chapter \ref{cha:iot-framework}} presents and defines the IoT framework embraced in terms of components, design phases and boundaries.
+	
+	\item \textbf{Chapter \ref{cha:theory}} describes constructs adopted as theoretical underpinning: co-design and the HCI approach based on TUIs.
+
+	\item \textbf{Chapter \ref{cha:research-methodology}} depicts the research method and approach adopted, providing an overview of the user studies conducted and the prototypes built.
+
+	\item \textbf{Chapter \ref{cha:results}} summarises the results of the research papers.
+
+	\item \textbf{Chapter \ref{cha:contributions}} outlines the contributions of the thesis and their relation to the research papers.
+
+	\item \textbf{Chapter \ref{cha:evaluation}} proposes an evaluation of the contributions in relation to the research questions.
+
+	\item \textbf{Chapter \ref{cha:conclusions}} concludes the thesis sketching future research and possible evolution of the tools presented.
+\end{itemize}
+
+\textbf{Part II} contains the seven research papers in full length.
