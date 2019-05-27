@@ -86,8 +86,8 @@
             pdfauthor={Francesco Gianni},
             pdftitle={PhD Thesis},
             colorlinks=true,
-            citecolor=blue,
-            urlcolor=blue,
+            citecolor=black,
+            urlcolor=black,
             linkcolor=black,
         %    pdfborder={0 0 0}
 			}
@@ -164,17 +164,17 @@
 % \maketitle
 
 \aliaspagestyle{part}{empty}
-\includepdf{cover-1.pdf}
-\includepdf{cover-2.pdf}
+\includepdf{title_page_1.pdf}
+\includepdf{title_page_2.pdf}
 \frontmatter
 \setcounter{page}{3}
-% \include{F5-quotes}
-% \cleardoublepage
+\include{F5-quotes}
+\cleardoublepage
 \include{F1-abstract}
 \cleardoublepage
 \include{F2-preface}
-% \cleardoublepage
-% \include{F3-acknowledgements}
+\cleardoublepage
+\include{F3-acknowledgements}
 \cleardoublepage
 \tableofcontents
 \cleardoublepage
@@ -213,3 +213,6 @@
 \pagestyle{cleared}
 \include{P2-papers}
 \end{document}
+
+%2019:185 	ISBN 978-82-326-3967-0 	Electronic 	2019-05-21
+%2019:185 	ISBN 978-82-326-3966-3 	Printed 	2019-05-21
